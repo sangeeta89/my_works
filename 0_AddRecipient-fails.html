@@ -1,0 +1,225 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unit Test Results: PersonToPerson Payments (Zelle).AddRecipient</title>
+<link rel="stylesheet" type="text/css" title="Style" href="../stylesheet.css">
+<script type="text/javascript" language="JavaScript">
+        var TestCases = new Array();
+        var cur;
+        
+    cur = TestCases['PersonToPerson Payments (Zelle).AddRecipient'] = new Array();
+    
+        cur['awt.toolkit'] = 'sun.awt.windows.WToolkit';
+    
+        cur['file.encoding'] = 'Cp1252';
+    
+        cur['file.encoding.pkg'] = 'sun.io';
+    
+        cur['file.separator'] = '\\';
+    
+        cur['java.awt.graphicsenv'] = 'sun.awt.Win32GraphicsEnvironment';
+    
+        cur['java.awt.printerjob'] = 'sun.awt.windows.WPrinterJob';
+    
+        cur['java.class.path'] = 'C:\\Raja\\SoapUI-5.4.0\\bin\\soapui-5.4.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\activation-1.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\analytics-core-5.4.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\animal-sniffer-annotations-1.11.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\bcprov-jdk15-144.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\binding-2.0.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\commons-beanutils-1.7.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\commons-cli-1.2.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\commons-codec-1.3.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\commons-collections-3.2.2.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\commons-httpclient-3.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\commons-io-2.4.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\commons-lang-2.4.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\commons-logging-1.1.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\cssparser-0.9.5.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\dom4j-1.6.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\ezmorph-1.0.5.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\flex-messaging-common-1.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\flex-messaging-core-1.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\flex-messaging-opt-1.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\flex-messaging-proxy-1.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\flex-messaging-remoting-1.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\forms-1.0.7.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\google-http-client-1.21.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\google-oauth-client-1.21.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\groovy-all-2.4.4.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\guava-14.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\hamcrest-core-1.3.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\hermes-1.14.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\htmlunit-2.7.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\htmlunit-core-js-2.7.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\httpclient-4.1.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\httpclient-cache-4.1.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\httpcore-4.1.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\httpcore-nio-4.1.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\httpmime-4.1.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\i4jruntime-5.1.14.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jackson-annotations-2.3.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jackson-core-2.3.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jackson-databind-2.3.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\javassist-3.16.1-GA.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jaxen-1.1-beta-8.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jcifs-1.2.9.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jdom-1.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jettison-1.2.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jetty-6.1.26.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jetty-util-6.1.26.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jms-1.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\joda-time-1.6.2.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\js-1.7R2.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\json-20090211.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\json-lib-2.2.2-jdk15.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\json-path-0.9.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\json-smart-1.2.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jsr173_api-1.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jsr305-1.3.9.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\jtidy-r872-jdk15.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\junit-4.11.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\keen-client-api-java-2.0.2.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\l2fprod-common-directorychooser-7.3.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\l2fprod-common-fontchooser-7.3.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\log4j-1.2.14.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\looks-2.2.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\mail-1.4.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\maven-plugin-api-2.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\mixpanel-java-1.4.4.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\nekohtml-1.9.14.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\not-yet-commons-ssl-0.3.11.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\opensaml-2.5.1-1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\openws-1.4.2-1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\org.apache.oltu.oauth2.client-0.31.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\org.apache.oltu.oauth2.common-0.31.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\org.apache.oltu.oauth2.httpclient4-0.31.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\out-app-analytics-provider-5.4.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\proxy-vole-20131209.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\reflections-0.9.9-RC1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\rsyntaxtextarea-2.5.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\sac-1.3.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\saxon-9.1.0.8j.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\saxon-dom-9.1.0.8j.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\serializer-2.7.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\servlet-api-2.5-20081211.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\slf4j-api-1.6.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\slf4j-log4j12-1.6.4.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\swingx-soapui.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\ws-commons-util-1.0.2.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\wsdl4j-1.6.2-fixed.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\wss4j-1.6.16.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xalan-2.7.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xbean-fixed-2.4.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xbean_xpath-2.4.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xercesImpl-2.9.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xml-apis-1.3.04.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xml-apis-2.9.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xmlParserAPIs-2.6.2.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xmlpublic-2.4.0.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xmlsec-1.4.5.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xmltooling-1.3.2-1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xmlunit-1.2.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xom-1.1.jar;C:\\Raja\\SoapUI-5.4.0\\bin\\..\\lib\\xstream-1.3.1.jar;C:\\Raja\\SoapUI-5.4.0\\jre\\lib\\jfxrt.jar';
+    
+        cur['java.class.version'] = '52.0';
+    
+        cur['java.endorsed.dirs'] = 'C:\\Raja\\SoapUI-5.4.0\\jre\\lib\\endorsed';
+    
+        cur['java.ext.dirs'] = 'C:\\Raja\\SoapUI-5.4.0\\jre\\lib\\ext;C:\\windows\\Sun\\Java\\lib\\ext';
+    
+        cur['java.home'] = 'C:\\Raja\\SoapUI-5.4.0\\jre';
+    
+        cur['java.io.tmpdir'] = 'C:\\Users\\c030974\\AppData\\Local\\Temp\\';
+    
+        cur['java.library.path'] = 'C:\\Raja\\SoapUI-5.4.0\\jre\\bin;C:\\windows\\Sun\\Java\\bin;C:\\windows\\system32;C:\\windows;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;c:\\tools;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Citrix\\System32\\;C:\\Program Files\\Citrix\\ICAService\\;C:\\Program Files\\Citrix\\Virtual Desktop Agent\\;C:\\Program Files\\NetIQ\\SecureLogin\\;C:\\Program Files (x86)\\PASSPORT WEB TO HOST Client\\;C:\\Program Files\\nodejs\\;C:\\Users\\c030974\\AppData\\Local\\Android\\sdk\\tools;C:\\Users\\c030974\\AppData\\Local\\Android\\sdk\\platform-tools;C:\\Program Files\\Java\\jdk1.8.0_131\\bin;C:\\Program Files\\Collaborator Client;C:\\Program Files (x86)\\WebEx\\Productivity Tools;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\Microsoft SQL Server\\90\\Tools\\binn\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\c030974\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\ProgramData\\Rocket\\Macros;C:\\Program Files\\dotnet\\;C:\\Raja\\SoapUI-5.4.0\\bin;C:\\Ant\\apache-ant-1.10.4\\bin;C:\\Program Files (x86)\\Google\\Chrome\\Application;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;c:\\tools;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Citrix\\System32\\;C:\\Program Files\\Citrix\\ICAService\\;C:\\Program Files\\Citrix\\Virtual Desktop Agent\\;C:\\Program Files\\NetIQ\\SecureLogin\\;C:\\Program Files (x86)\\PASSPORT WEB TO HOST Client\\;C:\\ProgramData\\Rocket\\Macros;C:\\Program Files (x86)\\WebEx\\Productivity Tools;C:\\Users\\c030974\\AppData\\Local\\Programs\\Git\\cmd;C:\\Users\\c030974\\AppData\\Roaming\\npm;C:\\Users\\c030974\\AppData\\Local\\Android\\sdk;C:\\Program Files (x86)\\Fiddler\\;.';
+    
+        cur['java.runtime.name'] = 'Java(TM) SE Runtime Environment';
+    
+        cur['java.runtime.version'] = '1.8.0_152-b16';
+    
+        cur['java.specification.name'] = 'Java Platform API Specification';
+    
+        cur['java.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.specification.version'] = '1.8';
+    
+        cur['java.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vendor.url'] = 'http://java.oracle.com/';
+    
+        cur['java.vendor.url.bug'] = 'http://bugreport.sun.com/bugreport/';
+    
+        cur['java.version'] = '1.8.0_152';
+    
+        cur['java.vm.info'] = 'mixed mode';
+    
+        cur['java.vm.name'] = 'Java HotSpot(TM) 64-Bit Server VM';
+    
+        cur['java.vm.specification.name'] = 'Java Virtual Machine Specification';
+    
+        cur['java.vm.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.specification.version'] = '1.8';
+    
+        cur['java.vm.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.version'] = '25.152-b16';
+    
+        cur['line.separator'] = ' ';
+    
+        cur['os.arch'] = 'amd64';
+    
+        cur['os.name'] = 'Windows 7';
+    
+        cur['os.version'] = '6.1';
+    
+        cur['path.separator'] = ';';
+    
+        cur['soapui.ext.actions'] = 'C:\\Raja\\SoapUI-5.4.0\\bin\\actions';
+    
+        cur['soapui.ext.libraries'] = 'C:\\Raja\\SoapUI-5.4.0\\bin\\ext';
+    
+        cur['soapui.ext.listeners'] = 'C:\\Raja\\SoapUI-5.4.0\\bin\\listeners';
+    
+        cur['soapui.home'] = 'C:\\Raja\\SoapUI-5.4.0\\bin\\';
+    
+        cur['soapui.properties'] = 'soapui.properties';
+    
+        cur['sun.arch.data.model'] = '64';
+    
+        cur['sun.awt.enableExtraMouseButtons'] = 'true';
+    
+        cur['sun.boot.class.path'] = 'C:\\Raja\\SoapUI-5.4.0\\jre\\lib\\resources.jar;C:\\Raja\\SoapUI-5.4.0\\jre\\lib\\rt.jar;C:\\Raja\\SoapUI-5.4.0\\jre\\lib\\sunrsasign.jar;C:\\Raja\\SoapUI-5.4.0\\jre\\lib\\jsse.jar;C:\\Raja\\SoapUI-5.4.0\\jre\\lib\\jce.jar;C:\\Raja\\SoapUI-5.4.0\\jre\\lib\\charsets.jar;C:\\Raja\\SoapUI-5.4.0\\jre\\lib\\jfr.jar;C:\\Raja\\SoapUI-5.4.0\\jre\\classes';
+    
+        cur['sun.boot.library.path'] = 'C:\\Raja\\SoapUI-5.4.0\\jre\\bin';
+    
+        cur['sun.cpu.endian'] = 'little';
+    
+        cur['sun.cpu.isalist'] = 'amd64';
+    
+        cur['sun.desktop'] = 'windows';
+    
+        cur['sun.io.unicode.encoding'] = 'UnicodeLittle';
+    
+        cur['sun.java.command'] = 'com.eviware.soapui.tools.SoapUITestCaseRunner -raj -f C:/Users/c030974/Desktop/Backup/ReportGen/tmp/results C:/Users/c030974/Desktop/Backup/ReportGen/6-29-PersonToPersonPayments-soapui-Zelleproject.xml';
+    
+        cur['sun.java.launcher'] = 'SUN_STANDARD';
+    
+        cur['sun.jnu.encoding'] = 'Cp1252';
+    
+        cur['sun.management.compiler'] = 'HotSpot 64-Bit Tiered Compilers';
+    
+        cur['sun.os.patch.level'] = 'Service Pack 1';
+    
+        cur['user.country'] = 'US';
+    
+        cur['user.dir'] = 'C:\\Raja\\SoapUI-5.4.0\\bin';
+    
+        cur['user.home'] = 'C:\\Users\\c030974';
+    
+        cur['user.language'] = 'en';
+    
+        cur['user.name'] = 'c030974';
+    
+        cur['user.script'] = '';
+    
+        cur['user.timezone'] = 'Asia/Calcutta';
+    
+        cur['user.variant'] = '';
+    </script><script type="text/javascript" language="JavaScript">
+        function displayProperties (name) {
+          var win = window.open('','JUnitSystemProperties','scrollbars=1,resizable=1');
+          var doc = win.document;
+          doc.open();
+          doc.write("<html><head><title>Properties of " + name + "</title>");
+          doc.write("<style type=\"text/css\">");
+          doc.write("body {font:normal 68% verdana,arial,helvetica; color:#000000; }");
+          doc.write("table tr td, table tr th { font-size: 68%; }");
+          doc.write("table.properties { border-collapse:collapse; border-left:solid 1 #cccccc; border-top:solid 1 #cccccc; padding:5px; }");
+          doc.write("table.properties th { text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#eeeeee; }");
+          doc.write("table.properties td { font:normal; text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#fffffff; }");
+          doc.write("h3 { margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica }");
+          doc.write("</style>");
+          doc.write("</head><body>");
+          doc.write("<h3>Properties of " + name + "</h3>");
+          doc.write("<div align=\"right\"><a href=\"javascript:window.close();\">Close</a></div>");
+          doc.write("<table class='properties'>");
+          doc.write("<tr><th>Name</th><th>Value</th></tr>");
+          for (prop in TestCases[name]) {
+            doc.write("<tr><th>" + prop + "</th><td>" + TestCases[name][prop] + "</td></tr>");
+          }
+          doc.write("</table>");
+          doc.write("</body></html>");
+          doc.close();
+          win.focus();
+        }
+      
+      </script>
+</head>
+<body>
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org/">JUnit</a> and <a href="http://ant.apache.org/">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h3>Class PersonToPerson Payments (Zelle).AddRecipient</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
+</tr>
+<tr valign="top" class="Failure">
+<td><a title="Display all tests" href="0_AddRecipient.html">AddRecipient</a></td><td><a title="Display all tests" href="0_AddRecipient.html">13</a></td><td>0</td><td><a title="Display only failures" href="0_AddRecipient-fails.html">7</a></td><td></td><td>5.600</td><td></td><td></td>
+</tr>
+</table>
+<h2>Failures</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="P_BothTokens_1_Email_1_Mobile"></a>P_BothTokens_1_Email_1_Mobile</td><td>Failure</td><td>Cancelling due to failed test step<br>
+<br>
+<code>&lt;h3&gt;&lt;b&gt;1_Email_1_Mobile Failed&lt;/b&gt;&lt;/h3&gt;&lt;pre&gt;[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes<br>[Script Assertion] Cannot get property 'resultStatus' on null object<br>&lt;/pre&gt;&lt;hr/&gt;</code></td><td>0.369</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="P_BothTokens_3_Email_3_Mobile"></a>P_BothTokens_3_Email_3_Mobile</td><td>Failure</td><td>Cancelling due to failed test step<br>
+<br>
+<code>&lt;h3&gt;&lt;b&gt;3_Email_3_Mobile Failed&lt;/b&gt;&lt;/h3&gt;&lt;pre&gt;[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes<br>[Script Assertion] Cannot get property 'resultStatus' on null object<br>&lt;/pre&gt;&lt;hr/&gt;</code></td><td>0.421</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="P_3EmailTokens"></a>P_3EmailTokens</td><td>Failure</td><td>Cancelling due to failed test step<br>
+<br>
+<code>&lt;h3&gt;&lt;b&gt;3_EmailTokens Failed&lt;/b&gt;&lt;/h3&gt;&lt;pre&gt;[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes<br>[Script Assertion] Cannot get property 'resultStatus' on null object<br>&lt;/pre&gt;&lt;hr/&gt;</code></td><td>0.199</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="P_3MobileTokens"></a>P_3MobileTokens</td><td>Failure</td><td>Cancelling due to failed test step<br>
+<br>
+<code>&lt;h3&gt;&lt;b&gt;3_MobileTokens Failed&lt;/b&gt;&lt;/h3&gt;&lt;pre&gt;[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes<br>[Script Assertion] Cannot get property 'resultStatus' on null object<br>&lt;/pre&gt;&lt;hr/&gt;</code></td><td>0.153</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="P_AddRecepientNullNick"></a>P_AddRecepientNullNick</td><td>Failure</td><td>Cancelling due to failed test step<br>
+<br>
+<code>&lt;h3&gt;&lt;b&gt;AddRecipientNullNick Failed&lt;/b&gt;&lt;/h3&gt;&lt;pre&gt;[Valid HTTP Status Codes] Response status code:400 is not in acceptable list of status codes<br>&lt;/pre&gt;&lt;hr/&gt;</code></td><td>0.191</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="N_Add_DuplicateRecipient"></a>N_Add_DuplicateRecipient</td><td>Failure</td><td>Cancelling due to failed test step<br>
+<br>
+<code>&lt;h3&gt;&lt;b&gt;N_Add_DuplicateRecipient Failed&lt;/b&gt;&lt;/h3&gt;&lt;pre&gt;[Contains] Missing token [51066] in Response<br>[Dup Desc] Missing token [DUP RECP NAME/NICKNAME FND] in Response<br>&lt;/pre&gt;&lt;hr/&gt;</code></td><td>0.104</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="N_addRecipient_DuplicateMobile"></a>N_addRecipient_DuplicateMobile</td><td>Failure</td><td>Cancelling due to failed test step<br>
+<br>
+<code>&lt;h3&gt;&lt;b&gt;N_addRecipient_DuplicateMobile Failed&lt;/b&gt;&lt;/h3&gt;&lt;pre&gt;[Contains] Missing token [51066] in Response<br>[Script Assertion] Cannot get property 'resultStatus' on null object<br>&lt;/pre&gt;&lt;hr/&gt;</code></td><td>0.800</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('PersonToPerson Payments (Zelle).AddRecipient');">
+                    Properties &raquo;
+                </a>
+</div>
+</body>
+</html>
