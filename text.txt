@@ -1,0 +1,74 @@
+Lessons learned: 
+1.You can be the best candidate and still not get selected. 
+
+
+
+Round 1 - Programming & logical discussion 
+Round 2 - QA discussion 
+Round 3 - technical 1:1 discussion 
+HR
+
+
+git checkout branch name
+Git add.
+Git add file path
+git commit -m ' added changes to implement interface '
+git push 
+
+git pull origin master
+git stash
+git stash filename
+
+------------------------------
+Freshworks
+------------------------------
+Round 1: QA 1:1 discussion
+
+	1.	Tell me about yourself
+	2.	Roles and responsibilities
+	3.	Agile methodologies
+	4.	What types of testing have you done?
+	5.	Smoke and Sanity testing
+	6.	Example for low priority and high severity
+	7.	Write test case for flight booking integration with Google Calendar app in mobile?
+	8.	Write test case for Gmail mail compose?
+	9.	Write the requirements that you will put for a shopping app in mobile?
+	10.	Api testing - what validations have you done in Api automation?
+	11.	What type of validations that you test in Api testing?
+	12.	Difference between put and patch.
+
+Round 2: Technical 1:1 discussion
+
+	1.	Tell me about yourself
+	2.	Array :  |1  4  6    |
+                     | 3  9  7   |
+                     |11 13 19  |
+Which sorting technique can be applied which is efficient  based on less time complexity? Write the sorting program to implement the complexity?
+
+	3.	What is interface? Tell example in selenium
+	4.	What is class?
+	5.	What is the difference between class & interface?
+	6.	What are the locators have you used? 
+	7.	Which locator is efficient to use to reduce complexity?
+	8.	What kind of http status codes you have validated in your project? Tell me the http status codes
+	9.	Apart from http status codes what kind of validations have done ?
+	10.	What client have you used for Api testing? 
+	11.	For soap webservice testing which client have you used?
+	12.	What are the frameworks have you worked till date?
+	13.	Tell me the efficient way framework in terms of complexity ?
+	14.	Can you tell about the types of sorting techniques that you know ? Tell me which one you implement often?
+	15.	Implement there above set of array with binary search tree 
+	16.	What is difference between binary search & binary search tree ?
+	17.	Have you handled the exceptions in your experience ? What are those? How do you handle those exceptions ?
+	18.	Any appreciation that you have received!
+
+*********************************************
+
+Handling windows authentication popup in IE11 with robot class
+
+Instructions
+	1.	Set the iedriver path in Path of System environment variables
+	2.	Set internet options : set zoom level 100%
+	3.	Internet options : set to "Automatic login with current username password " in security settings
+	4.	Internet options: enable protected mode for all zones : trusted sites, restricted , local intranet, internet website
+	5.	Use code  in git in folder sangeetasen89/myworks/ file namedhandling windows authentication popup in IE11 with robot class
