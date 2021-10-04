@@ -1,0 +1,344 @@
+Technical(Java) 
+1.	Core Java
+	a.	Oops concept – All in detail + Their Differences (super, this, method overloading, overriding, class, objects)
+	b.	Wrapper class
+	c.	Type casting
+	d.	Abstraction V/s Interface
+	e.	Runtime polymorphishm V/s Complie time 
+2.	Java Advanced -Java Collections
+	a.	Map / List/Set / Queue /Vector(Vector –optional) – Array list/Linkedlist/HashSet  etc all and their differences
+	b.	Iterator
+	c.	Hashing
+3.	Strings
+	a.	charAt/ Concat/strlen etc all string methods and their usage
+	b.	String V/s String Builder V/s String Buffer
+	c.	Mutable vs Immutable –concept
+4.	Exception Handling in Automation
+
+Technical(Testing)
+1.	Methodology- Agile /Scrum/Waterfall/V model 
+2.	Testing concepts –BugLife cycle/SDLC/Types of testing /Methods of testing etc
+3.	Basic Selenium @
+	a.	Web driver methods @
+	b.	Handling dynamic elements @
+	c.	Handling multiple windows @
+	d.	Handling alerts
+4.	API 
+	a.	Http methods @
+	b.	Http error codes
+	c.	Payload @
+	d.	Parameritization – passing by ID or value @
+	e.	SOAP V/s RESTFul services
+	f.	API V/s Webservices
+	g.	Authenticators
+
+5.	Framework 
+	a.	TestNG 
+		i.	Annotations Hierarchy -@BeforeSuite @BeforeMethod etc 
+		ii.	@dataprovider
+		iii.	Annotation for skipping test case , prioritize
+		iv. dependsonMethods
+	b.	Cucumber
+		i.	Gherkin
+		ii.	Scenario Outline
+		iii.Features
+		iv.	Dry Run/Hooks
+	c.	RESTAssured – Basically if its BDD or not – it again depends on your Java/Cucumber understanding
+	d.	If any Frameworks mentioned in Resume , please check those as well like Data driven /Hybrid framework – Otherwise ignore
+  
+Technical (General Questions)
+1.	Basic DB queries – Wild cards,Joins-Inner,Left,Outer,Right /Methods – Avg(),Count(),Max()   etc
+2.	GIT commands
+Extra Technical on requirement:
+1.	Kafka 
+2.	Microservices
+3.  MongoDB
+
+Note: Last but not the least – If you have mentioned Load testing/Security Testing/UX testing etc in your resume – Please do prepare that as well as per your resume . 
+
+I hope this is sufficient for any interview . If I have missed anything please do include those as well
+
+Happy Learning ! All the Best! 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Selenium Architecture
+4 components of Selenium webdriver
+Selenium Client Library <->    JSON Wire Protocol over HTTP ->        Browser Drivers          -> Browsers
+(Selenium Language Bindings)       (REST API)		     (FirefoxDriver, ChromeDriver etc)	(Firefox,Chrome browsers etc)
+java,Ruby,C#, Python, Javascript					Transfer from Browser Drivers to Broswers  and vic versa
+										Http over Http Server 
+JSON WIre protocol : data is transferred from server and client on web .JSON wire protocol is a REST API that transfers information between Http server
+----------------------------------
+ Assert V/s Verify commands. 
+ “Assert” command, as soon as the validation fails the execution of that particular test method is stopped. ... 
+ Whereas, in the case of “Verify”, the test method continues execution even after the failure of an assertion statement.
+ ---------------------------------
+ Hard assert Vs Soft Assert 
+
+
+Hard Assertion	                                                                                
+It does not allow further execution of test if the line  containing hard assert gets failed.	
+Whole test case gets failed if at least 1 hard assert fails. eg : Assert.assertEquals(true,false);
+
+Soft Assertion     
+Next steps would be executed even if the line containing soft assertion gets failed.
+Extra lines of code are required to track the fail status. When used in raw format, failed test step would also yield in Pass test script.
+
+SOftAssert sa=New SoftAssert();sa.assertEquals(true,false);  -It doesnot print failed testcase statement in case fails 
+
+assertaAll = used to asssert all testcases irrespectve Fail test case , it shows the fail testcase and statement as well.If it finds any assert failure, it updates the test result and marks the script fail. 
+eg sa.assertAll() ; 
+ 
+ ----------------------------
+Synchronisation in Selenium:
+classified into 2 types: 
+1. Unconditional
+2. Conditional Synchronization
+Unconventional: Wait() and Thread.sleep - Not ideal ,  specify timeout value only,wait until certain amount of time and then proceed further.
+
+2.Implicit wait - It waits for certain amount of time period An implicit wait is to tell when trying to find an element or elements if they are not immediately available. , it applies wait to the entire class .
+It will work only for "FindElement" and "FindElements" statements
+
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.get("http://www.google.com");
+
+3.Explicit wait -  wait statement for certain condition to be satisfied until the specified timeout period. If the Webdriver finds the element within the timeout period the code will get executed.
+
+WebDriverWait wait=new WebDriverWait(driver,20);
+
+// Wait till the element is not visible
+WebElement element=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("ur xpath here")));
+
+4.Fluent wait - It waits for certain condition and time , checking the frequency on which the element is found
+---------------------------------
+
+Scroll in a Webpage
+ This  will scroll down the page by  1000 pixel vertical
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("window.scrollBy(0,1000)");
+
+//This will scroll the page till the element is found
+js.executeScript("arguments[0].scrollIntoView()";Element);
+
+----------------------------------
+Annotation hierarchy
+
+@BeforeSuite.
+@BeforeTest.
+@BeforeClass.
+@BeforeMethod.
+@Test.
+@AfterMethod.
+@AfterClass.
+@AfterTest
+
+----------------------------------
+
+------------------------
+Wrapper class:   Wrapper classes provide a way to use primitive data types (int, boolean, etc..) as objects.
+
+Primitive DataType	Wrapper Class
+byte				Byte
+short				Short
+int					Integer
+long				Long
+float				Float
+double				Double
+boolean				Boolean
+char				Character
+
+ the following methods are used to get the value associated with the corresponding wrapper object: intValue(), byteValue(), shortValue(), longValue(), floatValue(), doubleValue(), charValue(), booleanValue(),
+ toString()[convert wrapper objects to strings]
+ example:
+ Integer myInt = 5;
+ System.out.println(myInt.intValue());
+ 
+ Integer myIntg = 100  
+ String myString = myIntg.toString();
+------------------------
+Java
+Oops
+Object  : Instance of a class
+Class: It is the blueprint of creating objects
+Encapsulation: Combining data members and objects into a single unit is encapsulation , Java Bean
+Polymorphism : An operation performed in different styles ,COmpile time(Overloading) and RUntime polymorphishm (Overriding)
+Collections
+
+Array List : ArrayList class uses a dynamic array for storing the elements
+
+1.Java ArrayList class can contain duplicate elements.
+2.Java ArrayList class maintains insertion order.
+3.Java ArrayList class is non synchronized.
+4.Java ArrayList allows random access because array works at the index basis.
+5.In ArrayList, manipulation is little bit slower than the LinkedList in Java because a lot of shifting needs to occur if any element is removed from the array list.
+
+  ArrayList<String> list=new ArrayList<String>();//Creating arraylist    
+  list.add("Mango");
+Inherits AbstractList class and implements List Interface
+
+------------------
+LinkedList : It uses Doubly-linked list to store elements 
+
+Java LinkedList class can contain duplicate elements.
+Java LinkedList class maintains insertion order, we can add or remove elements from both sides as it uses Doubly linked list
+Java LinkedList class is non synchronized.
+In Java LinkedList class, manipulation is fast because no shifting needs to occur. 
+Java LinkedList class can be used as a list, stack or queue
+
+Inherits  LinkedList class and implements List & Dequeue Interface
+-----------------
+ArrayList                                                      Vs                                             LinkedList 
+
+1. Dynamic Array for storing elements 						                 Uses Doubly-linked list for storing elements
+2. Manipulation is little slower as lot of shifting requires          		Manipulation is faster compared to ArrayList as no shifting needs to occur
+3. Implements List Interface												Implements List and Queue Interfaces
+4. Easier for storing accessing elements									Easier for manipulating elements
+
+HashSet :  It uses Hashtable for storage
+
+HashSet stores the elements by using a mechanism called hashing(Hashing -there is a hash function that maps keys to some values).
+HashSet contains unique elements only.
+HashSet allows null value.
+HashSet class is non synchronized.
+HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+HashSet is the best approach for search operations.
+The initial default capacity of HashSet is 16, and the load factor is 0.75
+
+Inherits AbstractSet class and implements Set interface. The Set interface inherits Collection and Iterable interfaces in hierarchical order.
+-----------------
+List                              VS                           Set 
+List can contain Duplicate elements						Set contains unique elements only
+
+-----------------
+
+HashMap : It implements Map interface which stores element in key and value pair
+
+Java HashMap contains values based on the key.
+Java HashMap contains only unique keys.
+Java HashMap may have one null key and multiple null values.
+Java HashMap is non synchronized.
+Java HashMap maintains no order.
+The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
+
+It inherits AbstractMap and implements Map interfcace
+
+Hashing : It is the process of converting an object into an integer value. The integer value helps in indexing and faster searches.
+
+HashMap<String, Integer> map = new HashMap<>();  
+map.put("Aman", 19);  
+map.put("Sunny", 29);
+
+---------------------
+
+HashTable: It uses HashTable class to map keys to values. It inherits Dictionery class and implements Map interface
+
+1. HashTable works on array of list where each list is a bucket . It uses the technique of hashing 
+2. It contains unique elements 
+3. Does not contain Null key or values
+4. It is syncronized
+5. It helps in insertion order
+
+Hashtable<Integer,String> hm=new Hashtable<Integer,String>();  
+  hm.put(100,"Amit");  
+  hm.put(102,"Ravi");  
+ 
+  for(Map.Entry m:hm.entrySet()){  
+   System.out.println(m.getKey()+" "+m.getValue()); 
+
+-------------------
+			HashMap                                                                      vs                                 HashTable
+
+1. It is not synchronized ie, it is not thread 	                                         It is Synchronised ,its threadsafe that is can be shared with multiple threads 
+cant be shared bteween multiple threads without proper synchronizationcode   
+2. It allows One NULL key and multiple NULL values															                                                                                               It doesnot allow any null key or value
+3. It inherits AbstractMap class 																			It inherits Dictionary class
+4. HashMap is traversed by Iterator interface																                                                                                               It is traversed by both Enumerator and Iterator
+5. HashMap is fast																							                                                               HashTable is slower compared to HashMap
+6. Iterator is fail-fast																					Enumerator is not fail-fast
+7. hashMap can be made Synchronised by calling method synchronized. HashTable is internally synchronized and cant be unsynchronized
+Map m = Collections.synchronizedMap(hashMap);
+
+----------------------
+Iterator in Java
+The user can apply these iterators to any of the classes of the Collection framework.
+In Java Iterator, we can use both of the read and remove operations.
+
+4 methods 
+hasNext()
+next()
+remove()
+forEachRemaining()
+
+---------------------
+GIT commands
+
+Config credentials in git repository        -git config --global user.name "Sam Smith"
+		   			 git config --global user.email sam@example.com
+									 								 
+											 
+									
+1.Create a local new repository                                                                  - git init
+2.Checkout a repository (create a working copy of local repo)                                    - git clone /path/to/repository
+3.Add files (one to more files to staging)                                                       - git add <filename>  or git add * (add all)
+4.Commit the changes to head(but not yet to remote repository)                                   - git commit -m "commited"
+5.Commit any newly added files through git add ;also commit any changes that has been made       - git commit -a
+6.Send changes to master branch of remote repository                                             - git push orgin master
+7.Status ( list the files that has been added or changes added that still need to add or commit) - git status
+8. Connect to remote repository                                                                  - git remote add origin <server>
+9. List all currently configured remote repository												 - git remote -v
+
+10.Checkout a new branch and switch to it 									- git checkout -b <branchname>
+11.Switch from one branch to another 										- git checkout <branchname>
+12. Delete the feature branch 												- git branch -d <branchname>
+13. Push your branch changes to your remote repository so others can use it - git push origin <branchname>
+14. Push all branch changes to remote repository                            - git push --all origin
+15. Delete branch from your remote repository                                - git push origin :<branchname>
+16. Fetch & merge changes from remote repo to working branch                 - git pull 
+17. Merge different to active branch 										- git merge <branchname>
+18.View all merge conflicts 											- git diff  or -git diff --base <filename>
+19. view all conflicts against base file 									-git diff <sourcebranch> <targetbranch>
+20. After manually resolving the merge conflcts, mark the changed file      -git add <filename>
+21. Get the unique commit id with log detail 								-git log
+22. Push all tags to remote repo 											-git push --tags <origin>
+23 Undo changes - If changes are messed up , undo to last change Head       - git checkout -- <filename>
+24. Instead, to drop all your local changes and commits, fetch the
+ latest history from the server and point your local master branch at it, do this:  -git fetch origin 
+																					-git reset --hard origin/master
+							
+25 Search working directory for foo()  - git grep "foo()"
+
+
+REST API
+
+Put(entire update of records) vs patch( partial update)
+
+Post vs Put
+
+Get vs Head
+CRUD operations
+REST vs SOAP
+
+
+
+
+
+Total Gross Pay = Base Pay + Overtime Pay + Bonuses + Insurance + Benefits + Others
