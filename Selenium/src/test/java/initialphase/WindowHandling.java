@@ -43,7 +43,6 @@ public class WindowHandling {
 	
 			WebElement loginpopup=driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']"));
 			loginpopup.click();
-//			Thread.sleep(2000);
 			WebElement searchbox=driver.findElement(By.xpath("//*[contains(@title,'Search')]"));
 			searchbox.sendKeys("iphone 13");
 //			String parentWin=driver.getWindowHandle();
@@ -73,15 +72,16 @@ public class WindowHandling {
 							WebElement proddetail=driver.findElement(By.xpath("//div[@class='_16FRp0']"));
 							System.out.println(proddetail.getText());
 							
-						}
-					}
-				}
-				driver.switchTo().defaultContent();
-			}	
+						}//inner if
+					}//inner for
+				}//outer if
+				
+			}//outer for
+			driver.close();
+			driver.switchTo().defaultContent();
 		}
 //	        Robot robot = new Robot();
-//
-//	        // Scroll Down using Robot class
+// Scroll Down using Robot class
 //	        robot.keyPress(KeyEvent.VK_PAGE_DOWN);
 //	        robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
 //	        

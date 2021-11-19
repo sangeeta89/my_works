@@ -7,7 +7,7 @@ public class Navigation {
 	public static WebDriver driver;
 	
 	void startup() {
-		System.setProperty("webdriver.chrome.driver","D:/jars/sele_jars/chrome/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","D:/jars/sele_jars/chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to("https://www.swiggy.com/");

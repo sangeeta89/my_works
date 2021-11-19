@@ -35,7 +35,7 @@ public class ReadWrite {
 	public void createFile() throws IOException {
 		
 
-			newFile=new File("C:/Users/705877/Documents/CreatedFile.xls");
+			newFile=new File("D:/File/CreatedFile.xls");
 			workbook=new HSSFWorkbook();
 			sheet =workbook.createSheet("ApachePoi");
 			
@@ -107,7 +107,7 @@ public class ReadWrite {
 		int rownum1=sheet1.getLastRowNum()-sheet.getFirstRowNum();
 		System.out.println(rownum1);
 		try {
-			createFile=new File("C:/Users/705877/Documents/MapFile.xlsx");
+			createFile=new File("D:/File/MapFile.xlsx");
 			FileOutputStream outputStream = new FileOutputStream(createFile) ;
 	        workbook1.write(outputStream);
 	        outputStream.close();

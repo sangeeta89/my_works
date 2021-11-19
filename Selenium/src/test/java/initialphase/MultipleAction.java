@@ -13,7 +13,7 @@ public class MultipleAction {
 	
 	public void startup() {
 		//	driver=new WebDriver(); // Cannot instantiate object of an Interface(Webdriver)
-			System.setProperty("webdriver.chrome.driver","D:/jars/sele_jars/chrome/chromedriver.exe");		
+			System.setProperty("webdriver.chrome.driver","D:/jars/sele_jars/chromedriver.exe");		
 			driver=new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get("https://www.freshtohome.com/");

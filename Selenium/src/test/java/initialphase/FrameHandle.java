@@ -10,7 +10,7 @@ public class FrameHandle {
 	
 	public void startup() {
 		
-			System.setProperty("webdriver.chrome.driver","D:/jars/sele_jars/chrome/chromedriver.exe");		
+			System.setProperty("webdriver.chrome.driver","D:/jars/sele_jars/chromedriver.exe");		
 			driver=new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.get("https://www.toolsqa.com/iframe-practice-page/");
