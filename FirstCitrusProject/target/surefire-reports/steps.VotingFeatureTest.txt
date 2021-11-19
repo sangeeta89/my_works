@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: steps.VotingFeatureTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.351 s <<< FAILURE! - in steps.VotingFeatureTest
+initializationError(steps.VotingFeatureTest)  Time elapsed: 0.029 s  <<< ERROR!
+java.lang.IllegalArgumentException: Not a file or directory: C:\Users\705877\sangeeta-workspace\FirstCitrusProject\target\src\test\resources\features
+

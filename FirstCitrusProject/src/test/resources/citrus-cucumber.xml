@@ -1,0 +1,11 @@
+<spring:beans xmlns:spring="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="http://www.citrusframework.org/schema/cucumber/testcase"
+     xsi:schemaLocation="
+     http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.citrusframework.org/schema/cucumber/testcase
+     http://www.citrusframework.org/schema/cucumber/testcase/citrus-cucumber-testcase.xsd">
+    <!-- Common settings -->
+
+</spring:beans>

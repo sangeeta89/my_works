@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.citrus.myproject.APIRunnerIT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.856 s <<< FAILURE! - in com.citrus.myproject.APIRunnerIT
+initializationError(com.citrus.myproject.APIRunnerIT)  Time elapsed: 0.024 s  <<< ERROR!
+java.lang.NoClassDefFoundError: io/cucumber/stepexpression/TypeRegistry
+Caused by: java.lang.ClassNotFoundException: io.cucumber.stepexpression.TypeRegistry
+

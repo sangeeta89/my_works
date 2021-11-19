@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.citrus.myproject.SampleGitRunnerIT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in com.citrus.myproject.SampleGitRunnerIT
+initializationError(com.citrus.myproject.SampleGitRunnerIT)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoClassDefFoundError: io/cucumber/stepexpression/TypeRegistry
+Caused by: java.lang.ClassNotFoundException: io.cucumber.stepexpression.TypeRegistry
+

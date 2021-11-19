@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.consol.citrus.dsl.runner.DefaultTestRunner" time="0.0" tests="1" errors="0" skipped="0" failures="0">
+    <testcase name="src/test/resources/com/citrus/myproject/TestApi.feature:13" classname="com.consol.citrus.dsl.runner.DefaultTestRunner" time="0.0"/>
+</testsuite>
