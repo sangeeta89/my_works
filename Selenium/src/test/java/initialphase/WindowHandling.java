@@ -1,6 +1,9 @@
 package initialphase;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,18 +11,27 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+//import org.junit.platform.runner.JUnitPlatform;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+//@RunWith(JUnitPlatform.class)
 public class WindowHandling {
-
+	
+	
 	public static WebElement product = null;
 	public static List<WebElement> products = null;
 	public static WebDriver driver;
 	public static String browser="chrome";
+//	SoftAssert softassert = new SoftAssert();
 	
-
-		void setup() throws Exception {
+		@BeforeAll
+		public void setup() throws Exception {
 			
 			if(browser.equalsIgnoreCase("edge")) {
 				WebDriverManager.edgedriver().setup();
@@ -35,18 +47,23 @@ public class WindowHandling {
 			driver.manage().window().maximize();
 			driver.get("https://www.flipkart.com/");
 			System.out.println("Main page title:"+driver.getTitle());
+			
 		}
 	
-
-	void addfunctions() {
+	@Test	
+	@DisplayName(" Test add functions")
+	public void addfunctions() {
 //		try{
 	
 			WebElement loginpopup=driver.findElement(By.xpath("//button[@class='_2KpZ6l _2doB4z']"));
 			loginpopup.click();
+			driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+			
 			WebElement searchbox=driver.findElement(By.xpath("//*[contains(@title,'Search')]"));
 			searchbox.sendKeys("iphone 13");
-//			String parentWin=driver.getWindowHandle();
-//	     	System.out.println(parentWin);
+			
+			String parentWin=driver.getWindowHandle();
+	     	System.out.println(parentWin);
 			WebElement srchbutton=driver.findElement(By.xpath("//form/div/button[@class='L0Z3Pu']"));
 			srchbutton.click();
 			List<WebElement> products=driver.findElements(By.cssSelector("div._4rR01T")); 
@@ -60,26 +77,35 @@ public class WindowHandling {
 				if(text.equalsIgnoreCase("APPLE iPhone 13 (Blue, 512 GB)"))
 
 				{	products.get(i).click();
-					System.out.println("Product Found" +products.get(i).getText());
-					for(String handle:driver.getWindowHandles()) {
-						 System.out.println("Child win " +handle);
-						 driver.switchTo().window(handle);
-	
-						WebElement addtocartbtn=driver.findElement(By.xpath("//*[@class='_2KpZ6l _2U9uOA _3v1-ww']"));
-						WebDriverWait wait=new WebDriverWait(driver,10);
-						wait.until(ExpectedConditions.visibilityOf(addtocartbtn)).click();
-						if(addtocartbtn.isDisplayed()==false){
-							WebElement proddetail=driver.findElement(By.xpath("//div[@class='_16FRp0']"));
-							System.out.println(proddetail.getText());
-							
-						}//inner if
-					}//inner for
+					System.out.println("Product Found-" +products.get(i).getText());
+					Set<String> allwindows=driver.getWindowHandles();
+					for(String childWin: allwindows) {
+						if(!parentWin.equals(childWin)){
+							System.out.println("Child win " +childWin);
+							driver.switchTo().window(childWin);
+							try{
+//								WebElement addtocartbtn=driver.findElement(By .xpath("//*[@class='_2KpZ6l_2U9uOA _3v1-ww']"));
+								WebDriverWait wait=new WebDriverWait(driver,10);
+//								wait.until(ExpectedConditions.visibilityOf(addtocartbtn)).click();
+//								if(addtocartbtn.isDisplayed()==false){
+									WebElement proddetail=driver.findElement(By.xpath("//div[@class='_16FRp0']"));
+									System.out.println(proddetail.getText());
+									WebElement cart=driver.findElement(By.xpath("//div[@class='_1dVbu9']"));
+									System.out.println(cart.getText());
+//								}//inner if
+							}catch(NoSuchElementException e){ 
+								e.printStackTrace();
+								teardown();
+
+							}
+						}//if window loop
+						}//inner for
 				}//outer if
 				
 			}//outer for
-			driver.close();
-			driver.switchTo().defaultContent();
+			
 		}
+	
 //	        Robot robot = new Robot();
 // Scroll Down using Robot class
 //	        robot.keyPress(KeyEvent.VK_PAGE_DOWN);
@@ -91,14 +117,15 @@ public class WindowHandling {
 //			      System.out.println("Specifications :" + getDetails.get(i).getText());
 //			      System.out.println("Jumped to element");
 //			    }
-
-		void teardown() {
+		@AfterAll
+		public void teardown() {
+//			driver.switchTo().defaultContent();
 			driver.quit();
 			
 		}
 	
 
-	public static void main(String ar[]) throws Exception {
+	public static void main(String[] args) throws Exception{
 		WindowHandling ob= new WindowHandling();
 		ob.setup();
 		ob.addfunctions();
